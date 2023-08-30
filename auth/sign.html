@@ -185,7 +185,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </form>
     </div>
 </div>
+ <!-- Banner opened -->
+    <div style="background-color:#ff73bf;">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="banner banner-color mt-1">
+                    <div class="col-xl-2 col-lg-3 col-md-12">
+<img src="https://maticx.gold/img/user.png" alt="image" class="image">
+<div class="logoutuser"><img src="https://maticx.gold/img/logout.png" alt="image" data-toggle="tooltip"  data-original-title="Log out"></div>
 
+                    </div>                    <div class="page-content col-xl-7 col-lg-6 col-md-12">
+                        <h3 class="mb-1">Your Referral Code : <span class="currentuserid"></span></h3>
+                        <input class="currentuseridlink" type="text" id="myInput" style="opacity:0; height:0px;" />
+                        <input class="currentuseridlinknew" type="text" id="myInput1" style="opacity:0; height:0px;"/>
+                      <p class="mb-0 fs-16">Your Referral Link : <span class="currentuseridlink"></span> &emsp; <span class="btn btn-warning" onclick="myFunction()"> <i class="fa fa-copy"></i></span></p>
+                      <p class="mb-0 fs-16"><a class="ethaddress" href="" target="_blank"> <span class="currentaddress"></span> <i class="fa fa fa-external-link"></i></a></p>
+                    </div>
+                   </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 text-right d-flex d-block">
+                  <center>
+          <div class="logoutuser">
+            <img border="0" data-original-height="225" data-original-width="581" height="39" src="https://maticx.gold/img/logout.png" width="100" alt="image" data-toggle="tooltip"  data-original-title="Log out"></div>
+ </center>      
+        </div>
+               <!-- row opened -->
 <div class = "auth__container brTop">
     <div class = "auth__col auth__footer">
         <p>Join if You are not yet with us:</p>
@@ -309,6 +332,8 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+    
 </script>
 
 <!-- <div style="border:1px solid red; background: green; padding: 25px;" id="connector"></div> -->
@@ -360,6 +385,25 @@ function requiredMetamask(that) {
     </div>
     <div id="Notice"></div>
     <script>
+        myContractInstance.methods.users(account).call().then(function (result1) {
+        
+            $('.currentuseridlink').html("https://bcmtup.github.io/sage/auth/new/?referralid=" + result1.id);
+
+
+
+
+            $('.currentuseridlink').val("https://bcmtup.github.io/sage/auth/new/?referralid=" + result1.id);
+
+
+
+
+            $('.sharebutton').attr('data-url', "https://bcmtup.github.io/sage/auth/new/?referralid=" + result1.id);
+            $('.currentuserid').html(result1.id);
+            $('.currentaddress').html(account);
+            $('.ethaddress').attr('href', 'https://polygonscan.com/address/' + account);
+        
+    });
+
 var config = {
     site: {
         domain:   location.hostname,
