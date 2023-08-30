@@ -6,8 +6,8 @@ var DEFAULT_UPLINE = "0xcc7D1D268F479a9A96501FB4F4b651bC556a4Bfb";
 var COOKIE_AUTH_NAME = "auth";
 var MATRIX_PRICE = 0.05;
 var MATRIX_XGOLD_PRICE = 0.05;
-var DEFAULT_GASPRICE = 98e9;
-var GASPRICE = config && config.gasPrice ? config.gasPrice * 1e9 : DEFAULT_GASPRICE;
+var DEFAULT_GAS = 500000;
+var GAS = config && config.gas ? config.gas * 1e9 : DEFAULT_GAS;
 
 var MatrixContract;
 var MatrixInstance;
