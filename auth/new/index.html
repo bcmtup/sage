@@ -172,33 +172,39 @@
         </div>
     </div>
     <div class="wrapper">
-        <div class="container">
+        <div class="auth__container">
 
-            <div class="auth__container">
+    <div class="auth__col auth__col_border">
+        <div class="auth__title auth__col_child">Automatic registration</div>
 
-                <div class="auth__col auth__col_border">
-                    <div class="auth__title auth__col_child">Automatic registration</div>
-
-                    <div class="auth__text auth__col_child" style="line-height: 20px">
-                        Check the ID of Your inviter. <br />You can edit before proceed to payment. </div>
-                    <form class="reg-form auth__col_child">
-                        <input type="text" name="upline" value="" class="reg-form__upline" style="" id="upline" pattern="^(0x[a-f0-9A-F]{40}|[0-9]+)$" onkeyup="this.value = this.value.replace(/[^0-9]/, '')" readonly />
-                        <a class="reg_upline_btn reg-form__change-upline" href="javascript:;">
+    <div class="auth__text auth__col_child" style="line-height: 20px">
+        Check the ID of Your inviter. <br / >You can edit before proceed to payment.    </div>
+    <form class="reg-form auth__col_child">
+            <input 
+                type="text" 
+                name="upline" 
+                value=""
+                class="reg-form__upline"
+                style=""
+                id="upline"
+                pattern="^(0x[a-f0-9A-F]{40}|[0-9]+)$"
+                onkeyup="this.value = this.value.replace(/[^0-9]/, '')"
+                readonly
+            />
+            <a class="reg_upline_btn reg-form__change-upline" href="javascript:;" >
                 <i class="fas fa-pen"></i>
             </a>
-                        
-                        <a class="reg_upline_btn reg-form__save-upline" href="javascript:;" style="display: none;">
+            <a class="reg_upline_btn reg-form__save-upline" href="javascript:;" style="display: none;">
                 <i class="fas fa-save"></i>
             </a>
-                    </form>
-                    <button class="reg-form__btn mt-3" type="button">
+        </form>
+        <button class="reg-form__btn mt-3" type="button">
                 To register        </button>
-                    <input type="hidden" name="ug" value="">
+    <input type="hidden" name="ug" value="">
 
-                    <div class="reg-form__btn-comment">
-                        After payment, if there was no automatic redirect to the main page, click <a href="/"><u>here</u></a> </div>
-                    </form>
-
+    <div class="reg-form__btn-comment">
+        After payment, if there was no automatic redirect to the main page, click <a href="/"><u>here</u></a>    </div>
+</form>
                 </div>
                 <div class="auth__col">
                     <div class="auth__title">Instructions</div>
@@ -539,7 +545,7 @@
                     $('[data-registration="metamask"]').click(function() {
                         if (config.haveWallet) {
                             let data = {
-                                uplineDefault: `56260`,
+                                uplineDefault: ``,
                                 upline: $('input[name="upline"]').val(),
                                 ug: $('input[name="ug"]').val(),
                             };
