@@ -7,7 +7,8 @@ var COOKIE_AUTH_NAME = "auth";
 var MATRIX_PRICE = 0.05;
 var MATRIX_XGOLD_PRICE = 0.05;
 var DEFAULT_GAS = 500000;
-var GAS = config && config.gas ? config.gas * 1e9 : DEFAULT_GAS;
+var DEFAULT_GASPRICE      = 98e9;
+var GASPRICE              = config && config.gasPrice ? config.gasPrice * 1e9 : DEFAULT_GASPRICE;
 
 var MatrixContract;
 var MatrixInstance;
